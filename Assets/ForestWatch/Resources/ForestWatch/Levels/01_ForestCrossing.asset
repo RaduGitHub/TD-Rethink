@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad7924c6edd3d44d92ef23a38db979f, type: 3}
+  m_Name: 01_ForestCrossing
+  m_EditorClassIdentifier: Assembly-CSharp::ForestWatch.DefenseLevel
+  levelId: forest-crossing
+  displayName: Forest Crossing
+  description: The original greenwood crossing. Learn to combine towers and your ranger across ten waves.
+  sortOrder: 0
+  startingGold: 300
+  startingLives: 20
+  waveCount: 10
+  enemyHealthMultiplier: 1
+  enemySpeedMultiplier: 1
+  seed: 41027
+  biome: 0
+  grassColor: {r: 0.35686275, g: 0.5058824, b: 0.24313726, a: 1}
+  pathColor: {r: 0.6784314, g: 0.5764706, b: 0.37254903, a: 1}
+  pathCenterColor: {r: 0.7254902, g: 0.6313726, b: 0.42745098, a: 1}
+  foliageDark: {r: 0.18039216, g: 0.43137255, b: 0.2901961, a: 1}
+  foliageMid: {r: 0.24705882, g: 0.5372549, b: 0.32156864, a: 1}
+  foliageLight: {r: 0.41960785, g: 0.6117647, b: 0.34509805, a: 1}
+  backgroundColor: {r: 0.09411765, g: 0.18039216, b: 0.20392157, a: 1}
+  route:
+  - {x: -19, y: 0.2, z: 7}
+  - {x: -12, y: 0.2, z: 7}
+  - {x: -10, y: 0.2, z: 5}
+  - {x: -10, y: 0.2, z: -3}
+  - {x: -7, y: 0.2, z: -6}
+  - {x: 0, y: 0.2, z: -6}
+  - {x: 3, y: 0.2, z: -3}
+  - {x: 3, y: 0.2, z: 3}
+  - {x: 6, y: 0.2, z: 6}
+  - {x: 13, y: 0.2, z: 6}
+  - {x: 16, y: 0.2, z: 3}
+  - {x: 16, y: 0.2, z: -3}
+  - {x: 13, y: 0.2, z: -6}
+  buildSites:
+  - {x: -14, y: 0.2, z: 4}
+  - {x: -7, y: 0.2, z: 3}
+  - {x: -13, y: 0.2, z: -1}
+  - {x: -7, y: 0.2, z: -2}
+  - {x: -5, y: 0.2, z: -9}
+  - {x: -2, y: 0.2, z: -3}
+  - {x: 0, y: 0.2, z: 0}
+  - {x: 6, y: 0.2, z: 0}
+  - {x: 7, y: 0.2, z: 3}
+  - {x: 11, y: 0.2, z: 9}
+  - {x: 13, y: 0.2, z: 1}
+  - {x: 12, y: 0.2, z: -3}
+  heroStart: {x: -5, y: 0.2, z: -2}
+  campPosition: {x: -3, y: 0.2, z: 7}

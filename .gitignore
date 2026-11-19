@@ -1,0 +1,60 @@
+# Unity caches, local settings, and build output
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Local editor/IDE state and generated project files
+/.vs/
+/.vscode/
+/.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Local test runs, preference backups, and captures
+/TestResults/
+/Screenshots/
+/Assets/Screenshots/
+/Assets/Screenshots.meta
+
+# Agent state and local credentials
+/.agents/
+/.codex/
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.keystore
+*.jks
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+sysinfo.txt
+
+# Crash reports and exported packages
+*.stackdump
+*.unitypackage
+crashlytics-build.properties

@@ -1,0 +1,83 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Style src="Menu.uss" />
+  <ui:VisualElement name="menuShell" class="fw-shell fw-hidden">
+    <ui:VisualElement name="mainScreen" class="fw-page">
+      <ui:VisualElement class="fw-main-panel">
+        <ui:Label text="A TOWER DEFENSE ADVENTURE" class="fw-kicker" />
+        <ui:Label text="FOREST" class="fw-main-title" />
+        <ui:Label text="WATCH" class="fw-main-title" />
+        <ui:Label text="Build your defenses. Rally your ranger. Hold the gate." class="fw-subtitle" />
+        <ui:Button name="startGame" text="START GAME" class="fw-button fw-primary fw-menu-button" />
+        <ui:Button name="chooseLevel" text="CHOOSE LEVEL" class="fw-button fw-menu-button" />
+        <ui:Button name="openLexicon" text="ENEMY LEXICON" class="fw-button fw-menu-button fw-lexicon-button" />
+        <ui:Button name="quitGame" text="QUIT GAME" class="fw-button fw-quit" />
+        <ui:VisualElement class="fw-selected-summary">
+          <ui:Label text="SELECTED EXPEDITION" class="fw-selected-caption" />
+          <ui:Label name="selectedLevelName" text="Forest Crossing" class="fw-selected-name" />
+          <ui:Label name="selectedLevelStats" text="10 WAVES / 300 STARTING GOLD" class="fw-selected-stats" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="fw-main-callout" picking-mode="Ignore">
+        <ui:Label text="THE GATE NEEDS A HERO" class="fw-callout-heading" />
+        <ui:Label text="Three towers. One ranger. A realm to defend." class="fw-callout-copy" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="levelScreen" class="fw-page fw-centered-page fw-hidden">
+      <ui:VisualElement class="fw-large-panel">
+        <ui:Label text="CHOOSE YOUR EXPEDITION" class="fw-kicker" />
+        <ui:Label text="Every path needs a defender." class="fw-panel-heading" />
+        <ui:Label text="Choose a battlefield, then begin your watch. Each level has its own route, resources, and enemy strength." class="fw-panel-copy" />
+        <ui:ScrollView name="levelList" class="fw-level-scroll" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" />
+        <ui:VisualElement class="fw-panel-footer">
+          <ui:Label name="levelSelection" text="SELECTED: FOREST CROSSING" class="fw-selection-label" />
+          <ui:VisualElement class="fw-footer-actions">
+            <ui:Button name="levelsBack" text="BACK" class="fw-button fw-subtle fw-back-button" />
+            <ui:Button name="playSelected" text="PLAY SELECTED" class="fw-button fw-primary fw-play-button" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="settingsScreen" class="fw-page fw-centered-page fw-hidden">
+      <ui:VisualElement class="fw-settings-panel">
+        <ui:Label text="MAKE YOURSELF AT HOME" class="fw-kicker" />
+        <ui:Label text="SETTINGS" class="fw-panel-heading" />
+        <ui:Label name="settingsCaption" text="Set the mood for your next expedition." class="fw-panel-copy" />
+        <ui:VisualElement class="fw-setting-row">
+          <ui:VisualElement class="fw-setting-text">
+            <ui:Label text="Master volume" class="fw-setting-name" />
+            <ui:Label text="All game sounds" class="fw-setting-description" />
+          </ui:VisualElement>
+          <ui:Label name="volumeValue" text="70%" class="fw-volume-value" />
+        </ui:VisualElement>
+        <ui:Slider name="volume" low-value="0" high-value="100" value="70" class="fw-volume" />
+        <ui:VisualElement class="fw-setting-row">
+          <ui:VisualElement class="fw-setting-text">
+            <ui:Label text="Fullscreen" class="fw-setting-name" />
+            <ui:Label text="Fill the display with the battlefield" class="fw-setting-description" />
+          </ui:VisualElement>
+          <ui:Toggle name="fullscreen" class="fw-toggle" />
+        </ui:VisualElement>
+        <ui:VisualElement class="fw-setting-row">
+          <ui:VisualElement class="fw-setting-text">
+            <ui:Label text="Vertical sync" class="fw-setting-name" />
+            <ui:Label text="Match frame presentation to your display" class="fw-setting-description" />
+          </ui:VisualElement>
+          <ui:Toggle name="vsync" value="true" class="fw-toggle" />
+        </ui:VisualElement>
+        <ui:Label text="Changes are saved automatically." class="fw-auto-save-note" />
+        <ui:VisualElement class="fw-panel-footer">
+          <ui:Button name="resetSettings" text="RESET DEFAULTS" class="fw-button fw-subtle" />
+          <ui:Button name="settingsBack" text="BACK TO MENU" class="fw-button fw-primary fw-play-button" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="fw-topbar" picking-mode="Ignore">
+      <ui:Label text="FOREST WATCH" class="fw-wordmark" picking-mode="Ignore" />
+      <ui:Button name="openSettings" text="SETTINGS" class="fw-button fw-subtle fw-settings-button" />
+    </ui:VisualElement>
+    <ui:VisualElement class="fw-bottom-note" picking-mode="Ignore">
+      <ui:Label text="BUILD THE LINE. COMMAND YOUR HERO." picking-mode="Ignore" />
+      <ui:Label text="A NEW WATCH BEGINS" picking-mode="Ignore" />
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

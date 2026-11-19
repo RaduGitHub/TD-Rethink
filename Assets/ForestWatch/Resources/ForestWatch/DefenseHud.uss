@@ -1,0 +1,209 @@
+:root {
+    --ink: #15221f;
+    --panel: rgba(19, 31, 28, 0.96);
+    --edge: #68705a;
+    --gold: #edca7d;
+    --paper: #f4edd9;
+    --muted: #aebda8;
+}
+.document-root {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.hud {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: var(--paper);
+    font-size: 17px;
+}
+.top-row {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    top: 24px;
+    height: 78px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px 10px 12px;
+    background-color: var(--panel);
+    border-left-width: 3px;
+    border-left-color: var(--gold);
+}
+.crest {
+    width: 46px;
+    height: 46px;
+    border-width: 1px;
+    border-color: var(--gold);
+    border-radius: 23px;
+    color: var(--gold);
+    font-size: 28px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-right: 14px;
+}
+.eyebrow { color: var(--gold); font-size: 12px; letter-spacing: 2px; }
+.brand-title { font-size: 29px; -unity-font-style: bold; letter-spacing: 4px; margin-top: -2px; }
+.resources { flex-direction: row; height: 68px; }
+.resource {
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--panel);
+    border-bottom-width: 2px;
+    border-bottom-color: #495746;
+    margin-left: 8px;
+    padding: 8px 22px;
+    min-width: 155px;
+}
+.resource-icon { font-size: 27px; color: var(--gold); margin-right: 14px; }
+.resource-number { font-size: 25px; -unity-font-style: bold; }
+.resource-caption { color: var(--muted); font-size: 11px; letter-spacing: 1px; }
+.top-actions { flex-direction: row; align-items: center; }
+Button {
+    border-width: 1px;
+    border-color: #65705a;
+    border-radius: 3px;
+    background-color: #243a31;
+    color: var(--paper);
+    font-size: 14px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    padding: 10px 14px;
+    margin: 0;
+}
+Button:hover { background-color: #385444; border-color: var(--gold); }
+Button:active { background-color: #516b45; }
+Button:disabled { opacity: 0.4; }
+.small-button { margin-left: 8px; height: 45px; min-width: 90px; background-color: var(--panel); }
+.toast {
+    position: absolute;
+    top: 122px;
+    align-self: center;
+    max-width: 1000px;
+    padding: 11px 28px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gold);
+    background-color: rgba(18, 31, 26, 0.9);
+    color: #f5e6bd;
+    font-size: 17px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+.bottom-row {
+    position: absolute;
+    bottom: 48px;
+    left: 28px;
+    right: 28px;
+    height: 204px;
+    flex-direction: row;
+}
+.panel {
+    background-color: var(--panel);
+    border-top-width: 2px;
+    border-top-color: var(--gold);
+    border-left-width: 1px;
+    border-left-color: #4e5c49;
+    border-right-width: 1px;
+    border-right-color: #4e5c49;
+    border-bottom-width: 1px;
+    border-bottom-color: #4e5c49;
+    padding: 15px 19px;
+}
+.hero-panel { width: 375px; margin-right: 12px; }
+.hero-header { flex-direction: row; align-items: center; }
+.hero-emblem {
+    width: 52px;
+    height: 55px;
+    background-color: #335e58;
+    border-width: 1px;
+    border-color: #83bfb0;
+    border-radius: 7px 7px 20px 20px;
+    color: #e4e9cf;
+    -unity-text-align: middle-center;
+    font-size: 29px;
+    -unity-font-style: bold;
+    margin-right: 13px;
+}
+.hero-stat-column { flex-grow: 1; }
+.hero-title { color: var(--gold); font-size: 13px; letter-spacing: 1px; -unity-font-style: bold; }
+.hp-label { font-size: 14px; margin-top: 1px; color: #cbd9be; }
+.health-bar { height: 9px; margin-top: 7px; margin-bottom: 0; }
+.experience-bar { height: 4px; margin-top: 5px; margin-bottom: 9px; }
+.unity-progress-bar__container { flex-grow: 1; height: 100%; }
+.unity-progress-bar__background { flex-grow: 1; height: 100%; background-color: #0e1917; border-radius: 1px; overflow: hidden; }
+.unity-progress-bar__progress { position: absolute; left: 0; top: 0; bottom: 0; height: 100%; background-color: #85bb75; border-radius: 1px; }
+.unity-progress-bar__title { display: none; }
+.experience-bar .unity-progress-bar__progress { background-color: #63b8c8; }
+.equipment-label { font-size: 12px; color: #c4d3bd; white-space: normal; height: 32px; overflow: hidden; }
+.shards { font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 6px; }
+.forge-button { height: 30px; padding: 4px 8px; font-size: 11px; background-color: #354335; }
+.selection-panel { flex-grow: 1; margin-right: 12px; }
+.selection-header { flex-direction: row; align-items: center; justify-content: space-between; }
+.selection-title { color: var(--gold); font-size: 19px; -unity-font-style: bold; letter-spacing: 1px; }
+.close-button { width: 25px; height: 25px; padding: 0; font-size: 16px; border-width: 0; background-color: transparent; color: #a3ac98; }
+.selection-description { font-size: 13px; color: var(--muted); white-space: normal; height: 27px; }
+.selection-hint { font-size: 10px; color: #91a08e; letter-spacing: 2px; margin-top: 3px; margin-bottom: 7px; }
+.build-choices { flex-grow: 1; flex-direction: row; }
+.tower-card { flex-grow: 1; margin-right: 8px; padding: 8px 12px; align-items: flex-start; justify-content: center; }
+.tower-card Label { -unity-text-align: middle-left; }
+.tower-title { font-size: 16px; -unity-font-style: bold; color: var(--paper); }
+.tower-detail { font-size: 11px; -unity-font-style: normal; color: #b4c0ad; margin-top: 4px; }
+.tower-cost { font-size: 12px; color: var(--gold); margin-top: 6px; }
+.arrow-card { border-top-color: #b9c089; border-top-width: 3px; }
+.frost-card { border-top-color: #76c9cf; border-top-width: 3px; }
+.cannon-card { border-top-color: #d59b65; border-top-width: 3px; margin-right: 0; }
+.tower-actions { flex-grow: 1; align-items: stretch; }
+.target-controls { flex-direction: row; height: 32px; margin-bottom: 7px; align-items: center; }
+.target-label { color: var(--muted); font-size: 11px; margin-right: 12px; }
+.target-mode-button { flex-grow: 1; height: 30px; margin-right: 7px; padding: 4px 10px; font-size: 11px; }
+.target-selected { color: #16251b; background-color: #c3a765; border-color: #f2d899; }
+.tower-economy-actions { flex-grow: 1; flex-direction: row; }
+.upgrade-button { flex-grow: 2; background-color: #435a38; color: #f4e6b5; margin-right: 12px; }
+.sell-button { flex-grow: 1; background-color: #4f3730; color: #e7b6a2; }
+.wave-panel { width: 320px; }
+.encounter { font-size: 11px; color: var(--muted); letter-spacing: 1px; margin-bottom: 10px; }
+.wave-button { height: 64px; background-color: #c3a765; border-color: #f2d899; color: #18261e; font-size: 17px; }
+.wave-button:hover { background-color: #e2c786; }
+.nova-button { height: 43px; background-color: #294f54; border-color: #6aafb1; color: #c8eeec; margin-top: 11px; }
+.wave-caption { font-size: 10px; color: #92aaa0; -unity-text-align: middle-center; margin-top: 8px; }
+.footer {
+    position: absolute;
+    bottom: 12px;
+    left: 28px;
+    right: 28px;
+    height: 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #e0e3cc;
+    font-size: 12px;
+    background-color: rgba(18, 31, 26, 0.8);
+    padding: 3px 12px;
+}
+.footer-title { color: #d8c48d; font-size: 10px; letter-spacing: 2px; }
+.end-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 18, 15, 0.78);
+}
+.end-card { width: 700px; align-items: center; padding: 50px; border-width: 1px; border-color: var(--gold); background-color: #172b23; }
+.end-title { color: var(--gold); font-size: 40px; -unity-font-style: bold; margin-top: 15px; margin-bottom: 18px; }
+.end-description { white-space: normal; color: #c2d1ba; -unity-text-align: middle-center; font-size: 18px; margin-bottom: 30px; }
+.end-restart { width: 290px; height: 58px; background-color: #c3a765; color: #15251c; }
+.hidden { display: none; }
+.end-menu-button { width: 290px; height: 45px; margin-top: 12px; }

@@ -1,0 +1,59 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Style src="Lexicon.uss" />
+  <ui:VisualElement name="lexiconShell" class="lx-shell lx-hidden">
+    <ui:VisualElement class="lx-panel">
+      <ui:VisualElement class="lx-header">
+        <ui:VisualElement class="lx-header-copy">
+          <ui:Label text="THE RANGER'S FIELD NOTES" class="lx-kicker" />
+          <ui:Label text="ENEMY LEXICON" class="lx-title" />
+          <ui:Label text="Learn the threat. Choose your target. Protect the gate." class="lx-subtitle" />
+        </ui:VisualElement>
+        <ui:VisualElement class="lx-header-actions">
+          <ui:Label name="discoveryCount" text="0 / 9 CREATURES DISCOVERED" class="lx-discovery-count" />
+          <ui:Button name="closeLexicon" text="BACK TO MENU" class="lx-button" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="lx-body">
+        <ui:VisualElement class="lx-sidebar">
+          <ui:Label text="CREATURES" class="lx-section-heading" />
+          <ui:ScrollView name="creatureList" class="lx-scroll lx-creature-scroll" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" />
+        </ui:VisualElement>
+        <ui:ScrollView name="detailScroll" class="lx-scroll lx-detail-scroll" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto">
+          <ui:VisualElement name="lockedDetail" class="lx-locked-detail">
+            <ui:Label text="?" class="lx-unknown-emblem" />
+            <ui:Label text="AN UNWRITTEN PAGE" class="lx-locked-title" />
+            <ui:Label text="Encounter this creature during an expedition to reveal its name, combat role, statistics, and field notes." class="lx-locked-copy" />
+            <ui:Label text="Your discoveries are remembered between runs." class="lx-locked-footnote" />
+          </ui:VisualElement>
+          <ui:VisualElement name="revealedDetail" class="lx-revealed-detail lx-hidden">
+            <ui:VisualElement class="lx-creature-header">
+              <ui:Label name="emblem" text="R" class="lx-emblem" />
+              <ui:VisualElement class="lx-creature-heading">
+                <ui:Label name="role" text="RAIDER" class="lx-role" />
+                <ui:Label name="creatureName" text="Goblin Raider" class="lx-creature-name" />
+                <ui:Label name="encounters" text="0 ENCOUNTERED / 0 DEFEATED" class="lx-encounters" />
+              </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label name="description" text="" class="lx-description" />
+            <ui:Label name="introduction" text="" class="lx-introduction" />
+            <ui:Label text="BASE PROFILE" class="lx-section-heading" />
+            <ui:VisualElement name="statsGrid" class="lx-stats-grid" />
+            <ui:Label name="trait" text="" class="lx-trait" />
+            <ui:Label text="Wave and level modifiers change battle statistics. Gold rewards may include a wave bonus." class="lx-base-note" />
+            <ui:VisualElement class="lx-history">
+              <ui:Label name="historyTitle" text="LAST ENCOUNTER" class="lx-section-heading" />
+              <ui:Label name="historyStats" text="" class="lx-history-stats" />
+              <ui:Label name="historyCount" text="" class="lx-history-copy" />
+            </ui:VisualElement>
+            <ui:Label text="FIELD TACTICS" class="lx-section-heading" />
+            <ui:Label name="tactics" text="" class="lx-tactics" />
+          </ui:VisualElement>
+        </ui:ScrollView>
+      </ui:VisualElement>
+      <ui:VisualElement class="lx-footer">
+        <ui:Label text="Entries unlock only when encountered in a live expedition." />
+        <ui:Label text="ESC TO CLOSE  /  YOUR BATTLE IS PAUSED" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>

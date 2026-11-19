@@ -1,0 +1,109 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:Style src="DefenseHud.uss" />
+  <ui:VisualElement name="hud" class="hud" picking-mode="Ignore">
+    <ui:VisualElement class="top-row" picking-mode="Ignore">
+      <ui:VisualElement class="brand ui-blocker">
+        <ui:Label text="F" class="crest" />
+        <ui:VisualElement>
+          <ui:Label text="FOREST" class="eyebrow" />
+          <ui:Label text="WATCH" class="brand-title" />
+          <ui:Label name="levelName" text="FOREST CROSSING" class="resource-caption" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="resources" picking-mode="Ignore">
+        <ui:VisualElement class="resource ui-blocker">
+          <ui:Label text="G" class="resource-icon" />
+          <ui:VisualElement><ui:Label name="gold" text="300" class="resource-number" /><ui:Label text="GOLD" class="resource-caption" /></ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="resource ui-blocker">
+          <ui:Label text="+" class="resource-icon" />
+          <ui:VisualElement><ui:Label name="lives" text="20" class="resource-number" /><ui:Label text="GATE INTEGRITY" class="resource-caption" /></ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="resource ui-blocker">
+          <ui:Label text="W" class="resource-icon" />
+          <ui:VisualElement><ui:Label name="wave" text="0 / 10" class="resource-number" /><ui:Label text="WAVE" class="resource-caption" /></ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="top-actions" picking-mode="Ignore">
+        <ui:Button name="mainMenu" text="MENU" class="small-button ui-blocker" />
+        <ui:Button name="lexicon" text="LEXICON [B]" class="small-button ui-blocker" />
+        <ui:Button name="pause" text="PAUSE" class="small-button ui-blocker" />
+        <ui:Button name="speed" text="1× SPEED" class="small-button ui-blocker" />
+        <ui:Button name="restart" text="RESTART" class="small-button ui-blocker" />
+        <ui:Button name="settings" text="SETTINGS" class="small-button ui-blocker" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label name="toast" text="Build your towers. Rally your hero. Defend the forest." class="toast" picking-mode="Ignore" />
+    <ui:VisualElement class="bottom-row" picking-mode="Ignore">
+      <ui:VisualElement class="panel hero-panel ui-blocker">
+        <ui:VisualElement class="hero-header">
+          <ui:Label text="R" class="hero-emblem" />
+          <ui:VisualElement class="hero-stat-column">
+            <ui:Label name="heroLevel" text="RANGER  /  LEVEL 1" class="hero-title" />
+            <ui:Label name="heroHealth" text="200 / 200 HP" class="hp-label" />
+            <ui:ProgressBar name="healthBar" low-value="0" high-value="100" value="100" class="health-bar" />
+            <ui:ProgressBar name="experienceBar" low-value="0" high-value="100" value="0" class="experience-bar" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label name="equipment" text="No equipment · defeat enemies to find loot" class="equipment-label" />
+        <ui:Label name="shards" text="0 SHARDS  ·  0 EQUIPPED" class="shards" />
+        <ui:Button name="craft" text="FORGE EQUIPMENT  /  5 SHARDS" class="forge-button" />
+      </ui:VisualElement>
+      <ui:VisualElement class="panel selection-panel ui-blocker">
+        <ui:VisualElement class="selection-header">
+          <ui:Label name="selectedTitle" text="BUILD YOUR DEFENSE" class="selection-title" />
+          <ui:Button name="dismissSelection" text="×" class="close-button" />
+        </ui:VisualElement>
+        <ui:Label name="selectedDescription" text="Select a stone foundation beside the path to build a tower." class="selection-description" />
+        <ui:Label name="selectionHint" text="CHOOSE A TOWER" class="selection-hint" />
+        <ui:VisualElement name="buildChoices" class="build-choices">
+          <ui:Button name="arrow" class="tower-card arrow-card">
+            <ui:Label text="ARROW WATCH" class="tower-title" />
+            <ui:Label text="Fast shots · single target" class="tower-detail" />
+            <ui:Label text="75 GOLD" class="tower-cost" />
+          </ui:Button>
+          <ui:Button name="frost" class="tower-card frost-card">
+            <ui:Label text="FROST SPIRE" class="tower-title" />
+            <ui:Label text="Magic damage · slows foes" class="tower-detail" />
+            <ui:Label text="100 GOLD" class="tower-cost" />
+          </ui:Button>
+          <ui:Button name="cannon" class="tower-card cannon-card">
+            <ui:Label text="CANNON KEEP" class="tower-title" />
+            <ui:Label text="Heavy shells · splash damage" class="tower-detail" />
+            <ui:Label text="125 GOLD" class="tower-cost" />
+          </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="towerActions" class="tower-actions hidden">
+          <ui:VisualElement class="target-controls">
+            <ui:Label text="TARGET" class="target-label" />
+            <ui:Button name="targetFarthest" text="FARTHEST ALONG ROAD" class="target-mode-button" />
+            <ui:Button name="targetTankiest" text="TANKIEST" class="target-mode-button" />
+          </ui:VisualElement>
+          <ui:VisualElement class="tower-economy-actions">
+            <ui:Button name="upgrade" text="UPGRADE" class="upgrade-button" />
+            <ui:Button name="sell" text="SELL" class="sell-button" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+      <ui:VisualElement class="panel wave-panel ui-blocker">
+        <ui:Label name="encounter" text="THE FOREST NEEDS A WARDEN" class="encounter" />
+        <ui:Button name="startWave" text="START WAVE 1  [R]" class="wave-button" />
+        <ui:Button name="nova" text="NATURE NOVA  [Q]" class="nova-button" />
+        <ui:Label text="A burst of magic around your hero" class="wave-caption" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="footer" picking-mode="Ignore">
+      <ui:Label text="FOREST WATCH  /  FIRST PROTOTYPE" class="footer-title" picking-mode="Ignore" />
+      <ui:Label text="WASD / RIGHT CLICK: move     CLICK FOUNDATIONS: build     Q: nova     R: wave     B: lexicon     SPACE: pause     SCROLL: zoom" picking-mode="Ignore" />
+    </ui:VisualElement>
+    <ui:VisualElement name="endScreen" class="end-screen ui-blocker hidden">
+      <ui:VisualElement class="end-card">
+        <ui:Label text="THE WARDEN'S CHRONICLE" class="eyebrow" />
+        <ui:Label name="endTitle" text="THE FOREST STANDS" class="end-title" />
+        <ui:Label name="endDescription" text="Every wave repelled." class="end-description" />
+        <ui:Button name="endRestart" text="BEGIN A NEW DEFENSE" class="end-restart" />
+        <ui:Button name="endMenu" text="BACK TO MAIN MENU" class="end-menu-button" />
+      </ui:VisualElement>
+    </ui:VisualElement>
+  </ui:VisualElement>
+</ui:UXML>
